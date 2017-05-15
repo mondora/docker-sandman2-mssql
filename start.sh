@@ -1,0 +1,2 @@
+#!/bin/sh
+sandman2ctl -p $PORT mssql+pymssql://$MSSQL_USERNAME:$MSSQL_PASSWORD@$MSSQL_HOST/$MSSQL_DATABASE_NAME
