@@ -8,7 +8,7 @@ get a REST interface over a Microsoft Sql Server database.
 * run the image:
   ```sh
   docker run -d \
-      -e MSSQL_HOST=example.database.windows.net:1433 \
+      -e MSSQL_HOSTNAME=example.database.windows.net \
       -e MSSQL_DATABASE_NAME=example \
       -e MSSQL_USERNAME=username \
       -e MSSQL_PASSWORD=password \
@@ -26,10 +26,11 @@ The `sandman2` server listens on port 80 inside the container, which is
 
 ### Configuration
 
-The following environment variables must be specified when running the image:
+The following environment variables are used to configure the server:
 
-- `MSSQL_HOST`: the host (`hostname:port`) of the database server to
-  connect to
+- `MSSQL_HOSTNAME`
+- `MSSQL_PORT` (optional, defaults to `1443`)
 - `MSSQL_DATABASE_NAME`
 - `MSSQL_USERNAME`
 - `MSSQL_PASSWORD`
+- `MSSQL_ODBC_DRIVER` (optional, defaults to `ODBC Driver 13 for SQL Server`)
