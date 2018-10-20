@@ -12,6 +12,7 @@ get a REST interface over a Microsoft Sql Server database.
       -e MSSQL_DATABASE_NAME=example \
       -e MSSQL_USERNAME=username \
       -e MSSQL_PASSWORD=password \
+      -e SCHEMA=dbo \
       -p 5000:80 \
       mondora/sandman2-mssql
   ```
